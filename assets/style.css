@@ -1,0 +1,298 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f4f9f4;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    background: #2e7d32;
+    color: white;
+    padding: 16px 12px;
+}
+
+/* ===== HEADER LOGO ===== */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2e7d32;
+    color: white;
+    padding: 16px 20px;
+    gap: 12px;
+}
+
+.header-logos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-logos img {
+    width: 52px;
+    height: auto;
+}
+
+.header-title {
+    text-align: center;
+    flex: 1;
+}
+
+.header-title h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.header-title p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ===== RESPONSIVE HP ===== */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        padding: 14px;
+    }
+
+    .header-logos {
+        justify-content: center;
+    }
+
+    .header-logos img {
+        width: 46px;
+    }
+
+    .header-title h1 {
+        font-size: 1.2rem;
+    }
+}
+
+header h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 0.95rem;
+    margin-top: 6px;
+}
+
+.toga-container {
+    display: grid;
+    grid-template-columns: 1fr; /* default HP */
+    gap: 16px;
+    padding: 16px;
+}
+
+.toga-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    padding: 14px;
+}
+
+.toga-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.toga-card img {
+    width: 100%;
+    height: auto;              /* penting untuk HP */
+    aspect-ratio: 4 / 3;       /* proporsional */
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* ===== DESKTOP IMAGE SIZE CONTROL ===== */
+@media (min-width: 1024px) {
+
+    .toga-card img {
+        max-height: 400px;      /* perkecil tinggi */
+        aspect-ratio: 4 / 3;
+    }
+
+    .toga-card {
+        padding: 16px;
+    }
+}
+
+.toga-card h2 {
+    margin: 10px 0 4px;
+    font-size: 1.1rem;
+    color: #2e7d32;
+}
+
+.latin {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+button {
+    margin-top: 12px;
+    width: 100%; 
+    padding: 12px;
+    font-size: 0.95rem;
+    background: #43a047;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2e7d32;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ===== DETAIL PAGE ===== */
+
+.detail-header {
+    text-align: center;
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    padding: 30px 15px;
+}
+
+.detail-header p {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.detail-wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.detail-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.detail-content {
+    flex: 1;
+}
+
+.detail-content h2 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+.detail-content ul {
+    padding-left: 20px;
+}
+
+.detail-content ul li {
+    margin-bottom: 8px;
+}
+
+.back-btn {
+    margin-top: 25px;
+    background: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ===== RESPONSIVE TABLET ===== */
+@media (min-width: 600px) {
+    .toga-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 24px;
+    }
+}
+
+/* ===== RESPONSIVE DETAIL (HP) ===== */
+@media (max-width: 767px) {
+
+    .detail-header {
+        padding: 22px 14px;
+    }
+
+    .detail-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .detail-header p {
+        font-size: 0.9rem;
+    }
+
+    .detail-wrapper {
+        flex-direction: column;   /* gambar atas, teks bawah */
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .detail-image img {
+        max-width: 8    0%;
+        border-radius: 18px;
+    }
+
+    .detail-content h2 {
+        font-size: 1.1rem;
+        margin-top: 12px;
+    }
+
+    .detail-content p,
+    .detail-content ul li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .back-btn {
+        width: 100%;              /* tombol full width HP */
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== DESKTOP: CENTER SINGLE PLANT ===== */
+@media (min-width: 1024px) {
+    .toga-container {
+        display: flex;
+        justify-content: center; /* posisi tengah */
+        align-items: flex-start;
+    }
+
+    .toga-card {
+        max-width: 420px; /* supaya tidak kepanjangan */
+        width: 100%;
+    }
+}

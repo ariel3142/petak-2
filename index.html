@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taman TOGA KKN</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-logos">
+            <img src="assets/img/LOGO KKN 27 GEMAH.png" alt="Logo KKN">
+            <img src="assets/img/LOGO UPGRIS.png" alt="Logo UPGRIS">
+        </div>
+
+        <div class="header-title">
+            <h1>🌿 Taman TOGA Kelurahan Gemah</h1>
+            <p>Petak 1: Terong & Kemangi</p>
+        </div>
+    </header>
+
+    <section class="toga-container">
+        <!-- TERONG -->
+        <div class="toga-card">
+            <img src="assets/img/temu-kunci.jpg" alt="Temu Kunci">
+            <h2>Temu Kunci</h2>
+            <p class="latin">Boesenbergia pandurata</p>
+            <button onclick="goDetail('terong')">Lihat Manfaat</button>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
