@@ -1,7 +1,7 @@
 const dataToga = {
     terong: {
-        nama: "Terong",
-        latin: "Solanum melongena",
+        nama: "Temu Kunci",
+        latin: "Boesenbergia pandurata",
         gambar: "assets/img/temu-kunci.jpg",
         deskripsi: [
             "Temu kunci atau Boesenbergia pandurata adalah tanaman semak yang berumur tahunan. Tanaman ini termasuk ke dalam rempah-rempah yang kaya manfaat, biasa digunakan sebagai obat tradisional dan bumbu penyedap makanan.",
